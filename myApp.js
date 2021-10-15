@@ -79,7 +79,7 @@ const findOneByFood = (food, done) => {
 const findPersonById = (personId, done) => {
   Person.findById({_id:personId},function(err,personId){
     if (err) return console.error(err)
-    done(null,personId)
+    done(null,personId) // Final purpose of this "done"is execute this line "res.json(data);" from "server.js"
   });
   
 };
