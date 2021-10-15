@@ -77,7 +77,7 @@ const findOneByFood = (food, done) => {
 
 //use of method findById
 const findPersonById = (personId, done) => {
-  Person.findById({_id:personId},function(err,personId){
+  Person.findById({_id:personId},function(err,personId){ // "err" is the negative retun of "{_id:personId}" and "personId" is the positive return of "{_id:personId}".
     if (err) return console.error(err)
     done(null,personId) // Final purpose of this "done"is execute this line "res.json(data);" from "server.js"
   });
